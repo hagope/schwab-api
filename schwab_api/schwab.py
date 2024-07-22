@@ -683,6 +683,11 @@ class Schwab(SessionManager):
         response = json.loads(r.text)
         return response["Orders"]
 
+    def get_all_positions(self):
+        self.update_token(token_type='api')
+        r = requests.get(urls.all_positions(), headers=self.headers)
+        return json.loads(r.text)
+
     def get_account_info_v2(self):
         account_info = dict()
         self.update_token(token_type='api')
