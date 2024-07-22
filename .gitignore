@@ -134,3 +134,4 @@ auth.json
 cookies.json
 node_modules/.yarn-integrity
 yarn.lock
+session.json
